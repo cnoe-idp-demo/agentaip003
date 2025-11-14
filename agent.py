@@ -39,7 +39,7 @@ async def invoke_agent(request: InvocationRequest):
         if not user_message:
             raise HTTPException(
                 status_code=400, 
-                detail="No prompt found in input. Please provide a 'prompt' key in the input..."
+                detail="No prompt found in input. Please provide a 'prompt' key in the input."
             )
 
         result = strands_agent(user_message)
